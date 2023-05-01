@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/crolfs47/odin-js-todo-list#readme",
   "devDependencies": {
+    "css-loader": "^6.7.3",
     "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
+    "style-loader": "^3.3.2",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2"
   }
