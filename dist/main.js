@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/display.js":
+/*!************************!*\
+  !*** ./src/display.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n\n\nconst newTodoForm = document.getElementById('new-todo-form');\nconst todoContainer = document.getElementById('todo-container');\n\nconst showTodos = () => {\n  todoContainer.innerHTML = '';\n  _todo__WEBPACK_IMPORTED_MODULE_0__.todos.forEach((todo) => {\n    const todoItem = document.createElement('div');\n    todoItem.classList.add('todo-item');\n    todoItem.textContent = `${todo.title} - ${todo.desc}`;\n    todoContainer.appendChild(todoItem);\n  });\n};\n\nnewTodoForm.addEventListener('submit', showTodos);\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/display.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n\n\n\nconsole.log('Test 2');\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./display */ \"./src/display.js\");\n\n\n\n\nconsole.log('Test 2');\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"todoFactory\": () => (/* binding */ todoFactory)\n/* harmony export */ });\nconst todos = [];\nconst newTodoForm = document.getElementById('new-todo-form');\n\nconst todoFactory = (title, desc, dueDate, priority) => ({\n  title,\n  desc,\n  dueDate,\n  priority,\n  completed: false,\n});\n\nconst addTodo = (e) => {\n  e.preventDefault();\n  const title = document.getElementById('title').value;\n  const description = document.getElementById('description').value;\n  const date = document.getElementById('date').value;\n  const priority = document.getElementById('priority').value;\n\n  const todo = todoFactory(title, description, date, priority);\n  todos.push(todo);\n  console.log(todo.title);\n  console.log(todos);\n};\n\nnewTodoForm.addEventListener('submit', addTodo);\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/todo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"todoFactory\": () => (/* binding */ todoFactory),\n/* harmony export */   \"todos\": () => (/* binding */ todos)\n/* harmony export */ });\nconst todos = [];\nconst newTodoForm = document.getElementById('new-todo-form');\n\nconst todoFactory = (title, desc, dueDate, priority) => ({\n  title,\n  desc,\n  dueDate,\n  priority,\n  completed: false,\n});\n\nconst addTodo = (e) => {\n  e.preventDefault();\n  const title = document.getElementById('title').value;\n  const description = document.getElementById('description').value;\n  const date = document.getElementById('date').value;\n  const priority = document.getElementById('priority').value;\n\n  const newTodo = todoFactory(title, description, date, priority);\n  todos.push(newTodo);\n  console.log(newTodo.title);\n  // console.log(todos);\n};\n\nnewTodoForm.addEventListener('submit', addTodo);\n\n// export { todoFactory };\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/todo.js?");
 
 /***/ })
 

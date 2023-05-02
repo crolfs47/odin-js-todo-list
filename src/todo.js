@@ -1,7 +1,7 @@
-const todos = [];
+export const todos = [];
 const newTodoForm = document.getElementById('new-todo-form');
 
-const todoFactory = (title, desc, dueDate, priority) => ({
+export const todoFactory = (title, desc, dueDate, priority) => ({
   title,
   desc,
   dueDate,
@@ -16,12 +16,12 @@ const addTodo = (e) => {
   const date = document.getElementById('date').value;
   const priority = document.getElementById('priority').value;
 
-  const todo = todoFactory(title, description, date, priority);
-  todos.push(todo);
-  console.log(todo.title);
-  console.log(todos);
+  const newTodo = todoFactory(title, description, date, priority);
+  todos.push(newTodo);
+  console.log(newTodo.title);
+  // console.log(todos);
 };
 
 newTodoForm.addEventListener('submit', addTodo);
 
-export { todoFactory };
+// export { todoFactory };
