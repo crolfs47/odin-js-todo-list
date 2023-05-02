@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nconsole.log('Test 2');\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n\n\n\nconsole.log('Test 2');\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/todo.js":
+/*!*********************!*\
+  !*** ./src/todo.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"todoFactory\": () => (/* binding */ todoFactory)\n/* harmony export */ });\nconst todos = [];\nconst newTodoForm = document.getElementById('new-todo-form');\n\nconst todoFactory = (title, desc, dueDate, priority) => ({\n  title,\n  desc,\n  dueDate,\n  priority,\n  completed: false,\n});\n\nconst addTodo = (e) => {\n  e.preventDefault();\n  const title = document.getElementById('title').value;\n  const description = document.getElementById('description').value;\n  const date = document.getElementById('date').value;\n  const priority = document.getElementById('priority').value;\n\n  const todo = todoFactory(title, description, date, priority);\n  todos.push(todo);\n  console.log(todo.title);\n  console.log(todos);\n};\n\nnewTodoForm.addEventListener('submit', addTodo);\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/todo.js?");
 
 /***/ })
 
