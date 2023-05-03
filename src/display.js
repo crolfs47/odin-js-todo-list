@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { todos } from './todo';
 
 const newTodoForm = document.getElementById('new-todo-form');
@@ -8,7 +9,7 @@ const showTodos = () => {
   todos.forEach((todo) => {
     const todoItem = document.createElement('div');
     todoItem.classList.add('todo-item');
-    todoItem.textContent = `${todo.title} - ${todo.desc}`;
+    todoItem.textContent = `${todo.title} - ${todo.desc} - ${format(new Date(todo.dueDate), 'PP')} - ${todo.priority}`;
     todoContainer.appendChild(todoItem);
   });
 };
