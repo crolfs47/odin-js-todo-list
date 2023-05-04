@@ -20,4 +20,4 @@ const addProject = (e) => {
 
 newProjectForm.addEventListener('submit', addProject);
 
-export { projectFactory };
+export { projectFactory, projects };

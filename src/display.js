@@ -1,8 +1,10 @@
 import { format } from 'date-fns';
 import { todos, deleteTodo } from './todo';
+import { projects } from './project';
 
 const newTodoForm = document.getElementById('new-todo-form');
 const todoContainer = document.getElementById('todo-container');
+const projectSelect = document.getElementById('project-select');
 
 const showTodos = () => {
   todoContainer.innerHTML = '';
@@ -21,4 +23,14 @@ const showTodos = () => {
   }
 };
 
+const projectDropdown = () => {
+  for (let i = 0; i < projects.length; i += 1) {
+    const projectOption = document.createElement('option');
+    projectOption.textContent = projects[i].name;
+    projectSelect.appendChild(projectOption);
+  }
+};
+
 newTodoForm.addEventListener('submit', showTodos);
+
+export { projectDropdown };
