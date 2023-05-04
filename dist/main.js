@@ -476,7 +476,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var date
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./display */ \"./src/display.js\");\n\n\n\n\nconsole.log('Test 2');\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./display */ \"./src/display.js\");\n\n\n\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/project.js":
+/*!************************!*\
+  !*** ./src/project.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"projectFactory\": () => (/* binding */ projectFactory)\n/* harmony export */ });\nconst newProjectForm = document.getElementById('new-project-form');\n\nconst projectFactory = (name) => ({\n  name,\n  todos: [],\n});\n\nconst addProject = (e) => {\n  e.preventDefault();\n  const name = document.getElementById('project-name').value;\n  const newProject = projectFactory(name);\n  console.log(newProject);\n};\n\nnewProjectForm.addEventListener('submit', addProject);\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/project.js?");
 
 /***/ }),
 
@@ -486,7 +496,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"deleteTodo\": () => (/* binding */ deleteTodo),\n/* harmony export */   \"todoFactory\": () => (/* binding */ todoFactory),\n/* harmony export */   \"todos\": () => (/* binding */ todos)\n/* harmony export */ });\nconst todos = [];\nconst newTodoForm = document.getElementById('new-todo-form');\n\nconst todoFactory = (title, desc, dueDate, priority) => ({\n  title,\n  desc,\n  dueDate,\n  priority,\n  completed: false,\n});\n\nconst addTodo = (e) => {\n  e.preventDefault();\n  const title = document.getElementById('title').value;\n  const description = document.getElementById('description').value;\n  const date = document.getElementById('date').value;\n  const priority = document.getElementById('priority').value;\n\n  const newTodo = todoFactory(title, description, date, priority);\n  todos.push(newTodo);\n  console.log(newTodo.title);\n  // console.log(todos);\n};\n\nconst deleteTodo = (i) => {\n  todos.splice(i, 1);\n  const todoDiv = document.getElementById(`todo-${i}`);\n  todoDiv.remove();\n};\n\nnewTodoForm.addEventListener('submit', addTodo);\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/todo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"deleteTodo\": () => (/* binding */ deleteTodo),\n/* harmony export */   \"todoFactory\": () => (/* binding */ todoFactory),\n/* harmony export */   \"todos\": () => (/* binding */ todos)\n/* harmony export */ });\nconst todos = [];\nconst newTodoForm = document.getElementById('new-todo-form');\n\nconst todoFactory = (title, desc, dueDate, priority) => ({\n  title,\n  desc,\n  dueDate,\n  priority,\n  completed: false,\n});\n\nconst addTodo = (e) => {\n  e.preventDefault();\n  const title = document.getElementById('title').value;\n  const description = document.getElementById('description').value;\n  const date = document.getElementById('date').value;\n  const priority = document.getElementById('priority').value;\n\n  const newTodo = todoFactory(title, description, date, priority);\n  todos.push(newTodo);\n  // console.log(newTodo.title);\n  console.log(todos);\n};\n\nconst deleteTodo = (i) => {\n  todos.splice(i, 1);\n  const todoDiv = document.getElementById(`todo-${i}`);\n  todoDiv.remove();\n};\n\nnewTodoForm.addEventListener('submit', addTodo);\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/todo.js?");
 
 /***/ }),
 

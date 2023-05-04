@@ -18,8 +18,8 @@ const addTodo = (e) => {
 
   const newTodo = todoFactory(title, description, date, priority);
   todos.push(newTodo);
-  console.log(newTodo.title);
-  // console.log(todos);
+  // console.log(newTodo.title);
+  console.log(todos);
 };
 
 const deleteTodo = (i) => {
