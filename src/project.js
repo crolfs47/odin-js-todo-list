@@ -1,3 +1,4 @@
+const projects = [];
 const newProjectForm = document.getElementById('new-project-form');
 
 const projectFactory = (name) => ({
@@ -5,11 +6,16 @@ const projectFactory = (name) => ({
   todos: [],
 });
 
+const defaultProject = projectFactory('General');
+projects.push(defaultProject);
+
 const addProject = (e) => {
   e.preventDefault();
   const name = document.getElementById('project-name').value;
   const newProject = projectFactory(name);
-  console.log(newProject);
+  projects.push(newProject);
+  // console.log(newProject);
+  console.log(projects);
 };
 
 newProjectForm.addEventListener('submit', addProject);
