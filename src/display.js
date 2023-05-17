@@ -4,7 +4,8 @@ import { projects } from './project';
 
 const newTodoForm = document.getElementById('new-todo-form');
 const todoContainer = document.getElementById('todo-container');
-const projectSelect = document.getElementById('project-select');
+const newProjectForm = document.getElementById('new-project-form');
+const projectContainer = document.getElementById('project-container');
 
 const showTodos = () => {
   todoContainer.innerHTML = '';
@@ -23,14 +24,19 @@ const showTodos = () => {
   }
 };
 
-const projectDropdown = () => {
+const showProjects = () => {
+  projectContainer.innerHTML = '';
   for (let i = 0; i < projects.length; i += 1) {
-    const projectOption = document.createElement('option');
-    projectOption.textContent = projects[i].name;
-    projectSelect.appendChild(projectOption);
+    const projectDiv = document.createElement('div');
+    projectDiv.classList.add('project-item');
+    projectDiv.setAttribute('id', `project-${i}`);
+    projectDiv.textContent = `${projects[i].name}`;
+
+    projectContainer.appendChild(projectDiv);
   }
 };
 
 newTodoForm.addEventListener('submit', showTodos);
+newProjectForm.addEventListener('submit', showProjects);
 
-export { projectDropdown };
+export { showProjects };
