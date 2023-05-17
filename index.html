@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do List</title>
-</head>
-<body>
-  <h1>To Do List</h1>
-  <div>
-    <form id="new-project-form">
-      <label for="project-name">Project Name</label>
-      <input type="test" name="project-name" id="project-name">
-      <input type="submit" value="Create New Project">
-    </form>
-  </div>
-  <div>
-    <form id="new-todo-form">
-      <label for="title">Title</label>
-      <input type="text" name="title" id="title">
-      <label for="description">Description</label>
-      <input type="text" name="description" id="description">
-      <label for="date">Due Date</label>
-      <input type="date" name="date" id="date">
-      <label for="priority">Priority</label>
-      <select name="priority" id="priority">
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
-      <label for="project-select">Project</label>
-      <select name="project-select" id="project-select">
-
-      </select>
-      <input type="submit" value="Create">
-    </form>
-  </div>
-  <div id="todo-container">
-
-  </div>
-  <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">To Do List</header>
+      <aside class="sidebar">
+        <form id="new-project-form">
+          <label for="project-name">Project Name</label>
+          <input type="test" name="project-name" id="project-name" />
+          <input type="submit" value="Create New Project" />
+        </form>
+      </aside>
+      <div class="content">
+        <div>
+          <form id="new-todo-form">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" />
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" />
+            <label for="date">Due Date</label>
+            <input type="date" name="date" id="date" />
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <label for="project-select">Project</label>
+            <select name="project-select" id="project-select"></select>
+            <input type="submit" value="Create" />
+          </form>
+        </div>
+        <div id="todo-container"></div>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
