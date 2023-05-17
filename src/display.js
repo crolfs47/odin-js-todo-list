@@ -1,11 +1,11 @@
 import { format } from 'date-fns';
 import { todos, deleteTodo } from './todo';
-import { projects } from './project';
+import { projects, setCurrentProject } from './project';
 
 const newTodoForm = document.getElementById('new-todo-form');
 const todoContainer = document.getElementById('todo-container');
 const newProjectForm = document.getElementById('new-project-form');
-const projectContainer = document.getElementById('project-container');
+const projectList = document.getElementById('project-list');
 
 const showTodos = () => {
   todoContainer.innerHTML = '';
@@ -24,16 +24,28 @@ const showTodos = () => {
   }
 };
 
-const showProjects = () => {
-  projectContainer.innerHTML = '';
-  for (let i = 0; i < projects.length; i += 1) {
-    const projectDiv = document.createElement('div');
-    projectDiv.classList.add('project-item');
-    projectDiv.setAttribute('id', `project-${i}`);
-    projectDiv.textContent = `${projects[i].name}`;
+const selectProject = () => {
+  const projectLinks = document.querySelectorAll('.project-item');
+  projectLinks.forEach((projectLink) => {
+    projectLink.addEventListener('click', (e) => {
+      const index = e.target.id;
+      setCurrentProject(index);
+      console.log(index);
+    });
+  });
+};
 
-    projectContainer.appendChild(projectDiv);
+const showProjects = () => {
+  projectList.innerHTML = '';
+  for (let i = 0; i < projects.length; i += 1) {
+    const projectItem = document.createElement('li');
+    projectItem.classList.add('project-item');
+    projectItem.setAttribute('id', `${i}`);
+    projectItem.textContent = `${projects[i].name}`;
+
+    projectList.appendChild(projectItem);
   }
+  selectProject();
 };
 
 newTodoForm.addEventListener('submit', showTodos);

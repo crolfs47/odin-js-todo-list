@@ -8,16 +8,22 @@ const projectFactory = (name) => ({
 
 const defaultProject = projectFactory('General');
 projects.push(defaultProject);
+let currentProject = projects[0];
 
 const addProject = (e) => {
   e.preventDefault();
   const name = document.getElementById('project-name').value;
   const newProject = projectFactory(name);
   projects.push(newProject);
-  // console.log(newProject);
-  console.log(projects);
+  console.log(currentProject);
 };
+
+const setCurrentProject = (index) => {
+  currentProject = projects[index];
+};
+
+const getCurrentProject = () => currentProject;
 
 newProjectForm.addEventListener('submit', addProject);
 
-export { projectFactory, projects };
+export { projectFactory, projects, setCurrentProject, getCurrentProject };
