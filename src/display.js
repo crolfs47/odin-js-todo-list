@@ -3,12 +3,17 @@ import { todos, deleteTodo } from './todo';
 import { projects, setCurrentProject, getCurrentProject } from './project';
 
 const contentTitle = document.getElementById('content-title');
+
 const newTodoButton = document.getElementById('new-todo-button');
 const todoFormModal = document.getElementById('todo-form-modal');
 const newTodoForm = document.getElementById('new-todo-form');
 const newTodoCancel = document.getElementById('new-todo-cancel');
 const todoContainer = document.getElementById('todo-container');
+
+const newProjectButton = document.getElementById('new-project-button');
+const projectFormModal = document.getElementById('project-form-modal');
 const newProjectForm = document.getElementById('new-project-form');
+const newProjectCancel = document.getElementById('new-project-cancel');
 const projectList = document.getElementById('project-list');
 
 const showTodos = () => {
@@ -77,7 +82,18 @@ const showProjects = () => {
   selectProject();
 };
 
-newProjectForm.addEventListener('submit', showProjects);
+newProjectButton.onclick = () => {
+  projectFormModal.style.display = 'block';
+};
+
+newProjectForm.addEventListener('submit', () => {
+  projectFormModal.style.display = 'none';
+  showProjects();
+});
+
+newProjectCancel.onclick = () => {
+  projectFormModal.style.display = 'none';
+};
 
 newTodoButton.onclick = () => {
   todoFormModal.style.display = 'block';
