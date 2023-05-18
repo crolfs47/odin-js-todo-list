@@ -26,7 +26,8 @@ const addTodo = (e) => {
 };
 
 const deleteTodo = (i) => {
-  todos.splice(i, 1);
+  const currentProject = getCurrentProject();
+  currentProject.todos.splice(i, 1);
   const todoDiv = document.getElementById(`todo-${i}`);
   todoDiv.remove();
 };
