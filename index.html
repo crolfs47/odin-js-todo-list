@@ -10,11 +10,18 @@
     <div class="container">
       <header class="header">To Do List</header>
       <aside class="sidebar">
-        <form id="new-project-form">
-          <label for="project-name">Project Name</label>
-          <input type="test" name="project-name" id="project-name" />
-          <input type="submit" value="Create New Project" />
-        </form>
+        <h3>Projects</h3>
+        <button id="new-project-button">New Project</button>
+        <div id="project-form-modal" class="modal">
+          <div class="modal-content">
+            <form id="new-project-form">
+              <label for="project-name">Project Name</label>
+              <input type="test" name="project-name" id="project-name" />
+              <input type="submit" value="Create New Project" />
+              <button id="new-project-cancel">Cancel</button>
+            </form>
+          </div>
+        </div>
         <ul id="project-list"></ul>
       </aside>
       <div class="content">
