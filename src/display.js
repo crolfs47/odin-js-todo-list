@@ -9,12 +9,13 @@ const newProjectForm = document.getElementById('new-project-form');
 const projectList = document.getElementById('project-list');
 
 const showTodos = () => {
+  const project = getCurrentProject();
   todoContainer.innerHTML = '';
-  for (let i = 0; i < todos.length; i += 1) {
+  for (let i = 0; i < project.todos.length; i += 1) {
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo-item');
     todoDiv.setAttribute('id', `todo-${i}`);
-    todoDiv.textContent = `${todos[i].title} - ${todos[i].desc} - ${format(new Date(todos[i].dueDate), 'PP')} - ${todos[i].priority}`;
+    todoDiv.textContent = `${project.todos[i].title} - ${project.todos[i].desc} - ${format(new Date(project.todos[i].dueDate), 'PP')} - ${project.todos[i].priority}`;
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -52,7 +53,7 @@ const selectProject = () => {
       const index = e.target.id;
       setCurrentProject(index);
       assignActiveClass();
-      loadPage();
+      loadPage(getCurrentProject());
     });
   });
 };
@@ -69,6 +70,7 @@ const showProjects = () => {
   }
   setCurrentProject(projects.length - 1);
   assignActiveClass();
+  loadPage(getCurrentProject());
   selectProject();
 };
 
