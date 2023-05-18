@@ -3,7 +3,10 @@ import { todos, deleteTodo } from './todo';
 import { projects, setCurrentProject, getCurrentProject } from './project';
 
 const contentTitle = document.getElementById('content-title');
+const newTodoButton = document.getElementById('new-todo-button');
+const todoFormModal = document.getElementById('todo-form-modal');
 const newTodoForm = document.getElementById('new-todo-form');
+const newTodoCancel = document.getElementById('new-todo-cancel');
 const todoContainer = document.getElementById('todo-container');
 const newProjectForm = document.getElementById('new-project-form');
 const projectList = document.getElementById('project-list');
@@ -74,7 +77,19 @@ const showProjects = () => {
   selectProject();
 };
 
-newTodoForm.addEventListener('submit', showTodos);
 newProjectForm.addEventListener('submit', showProjects);
+
+newTodoButton.onclick = () => {
+  todoFormModal.style.display = 'block';
+};
+
+newTodoForm.addEventListener('submit', () => {
+  todoFormModal.style.display = 'none';
+  showTodos();
+});
+
+newTodoCancel.onclick = () => {
+  todoFormModal.style.display = 'none';
+};
 
 export { showProjects, loadPage };
