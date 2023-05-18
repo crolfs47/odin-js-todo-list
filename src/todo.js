@@ -23,7 +23,6 @@ const addTodo = (e) => {
 
   const currentProject = getCurrentProject();
   currentProject.todos.push(newTodo);
-  console.log(currentProject);
 };
 
 const deleteTodo = (i) => {

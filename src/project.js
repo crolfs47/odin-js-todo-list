@@ -12,7 +12,6 @@ const addProject = (e) => {
   const name = document.getElementById('project-name').value;
   const newProject = projectFactory(name);
   projects.push(newProject);
-  console.log(currentProject);
 };
 
 const setCurrentProject = (index) => {

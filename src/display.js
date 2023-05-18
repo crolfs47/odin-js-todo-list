@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 import { todos, deleteTodo } from './todo';
 import { projects, setCurrentProject, getCurrentProject } from './project';
 
+const contentTitle = document.getElementById('content-title');
 const newTodoForm = document.getElementById('new-todo-form');
 const todoContainer = document.getElementById('todo-container');
 const newProjectForm = document.getElementById('new-project-form');
@@ -22,6 +23,11 @@ const showTodos = () => {
 
     todoContainer.appendChild(todoDiv);
   }
+};
+
+const loadPage = () => {
+  contentTitle.textContent = getCurrentProject().name;
+  showTodos();
 };
 
 const clearActiveClass = () => {
@@ -46,7 +52,7 @@ const selectProject = () => {
       const index = e.target.id;
       setCurrentProject(index);
       assignActiveClass();
-      console.log(index);
+      loadPage();
     });
   });
 };
@@ -69,4 +75,4 @@ const showProjects = () => {
 newTodoForm.addEventListener('submit', showTodos);
 newProjectForm.addEventListener('submit', showProjects);
 
-export { showProjects };
+export { showProjects, loadPage };
