@@ -39,3 +39,7 @@ body {
   background: none;
   border: none;
 }
+
+.active {
+  color: rgb(92, 154, 128);
+}

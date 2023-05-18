@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import { todos, deleteTodo } from './todo';
-import { projects, setCurrentProject } from './project';
+import { projects, setCurrentProject, getCurrentProject } from './project';
 
 const newTodoForm = document.getElementById('new-todo-form');
 const todoContainer = document.getElementById('todo-container');
@@ -24,12 +24,28 @@ const showTodos = () => {
   }
 };
 
+const clearActiveClass = () => {
+  document.querySelectorAll('.project-item').forEach((projectItem) => {
+    projectItem.classList.remove('active');
+  });
+};
+
+const assignActiveClass = () => {
+  document.querySelectorAll('.project-item').forEach((projectItem) => {
+    if (projects[projectItem.id] === getCurrentProject()) {
+      projectItem.classList.add('active');
+    }
+  });
+};
+
 const selectProject = () => {
-  const projectLinks = document.querySelectorAll('.project-item');
-  projectLinks.forEach((projectLink) => {
-    projectLink.addEventListener('click', (e) => {
+  const projectItems = document.querySelectorAll('.project-item');
+  projectItems.forEach((projectItem) => {
+    projectItem.addEventListener('click', (e) => {
+      clearActiveClass();
       const index = e.target.id;
       setCurrentProject(index);
+      assignActiveClass();
       console.log(index);
     });
   });
@@ -45,6 +61,8 @@ const showProjects = () => {
 
     projectList.appendChild(projectItem);
   }
+  setCurrentProject(projects.length - 1);
+  assignActiveClass();
   selectProject();
 };
 
