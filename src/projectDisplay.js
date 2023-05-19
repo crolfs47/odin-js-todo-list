@@ -1,5 +1,5 @@
 import { projects, setCurrentProject, getCurrentProject } from './project';
-import { loadPage } from './display';
+import { loadPage } from './mainDisplay';
 
 const newProjectButton = document.getElementById('new-project-button');
 const projectFormModal = document.getElementById('project-form-modal');

@@ -20,7 +20,6 @@ body {
   color: white;
   grid-area: header;
   padding: 12px 24px;
-  font-size: 24px;
 }
 
 .sidebar {
@@ -30,14 +29,23 @@ body {
   padding: 12px 24px;
 }
 
-.content {
+.project-item {
+  background: none;
+  border: none;
+}
+
+.content-container {
   grid-area: content;
   padding: 12px 24px;
 }
 
-.project-item {
-  background: none;
-  border: none;
+.content-header {
+  display: flex;
+  align-items: center;
+}
+
+#project-title-btns {
+  padding-left: 12px;
 }
 
 .active {
