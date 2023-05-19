@@ -1,4 +1,4 @@
-import { projects, getCurrentProject } from './project';
+import { getCurrentProject } from './project';
 
 const todos = [];
 const newTodoForm = document.getElementById('new-todo-form');

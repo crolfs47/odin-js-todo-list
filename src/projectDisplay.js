@@ -6,6 +6,7 @@ const projectFormModal = document.getElementById('project-form-modal');
 const newProjectForm = document.getElementById('new-project-form');
 const newProjectCancel = document.getElementById('new-project-cancel');
 const projectList = document.getElementById('project-list');
+const projectDeleteImage = document.getElementById('project-delete-image');
 
 const clearActiveClass = () => {
   document.querySelectorAll('.project-item').forEach((projectItem) => {
@@ -44,7 +45,6 @@ const showProjects = () => {
 
     projectList.appendChild(projectItem);
   }
-  setCurrentProject(projects.length - 1);
   assignActiveClass();
   loadPage(getCurrentProject());
   selectProject();
@@ -61,6 +61,11 @@ newProjectForm.addEventListener('submit', () => {
 
 newProjectCancel.onclick = () => {
   projectFormModal.style.display = 'none';
+};
+
+projectDeleteImage.onclick = () => {
+  setCurrentProject(0);
+  showProjects();
 };
 
 export { showProjects };
