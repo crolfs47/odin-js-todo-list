@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  margin: 0px;\\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\\n}\\n\\n.container {\\n  display: grid;\\n  grid-template-columns: auto 1fr;\\n  grid-template-rows: auto 1fr;\\n  height: 100vh;\\n  width: 100vw;\\n  grid-template-areas:\\n    \\\"header header\\\"\\n    \\\"nav content\\\"\\n    \\\"nav content\\\";\\n}\\n\\n.header {\\n  background-color: rgb(64, 112, 92);\\n  color: white;\\n  grid-area: header;\\n  padding: 12px 24px;\\n  font-size: 24px;\\n}\\n\\n.sidebar {\\n  background-color: rgba(209, 235, 225, 0.537);\\n  grid-area: nav;\\n  max-width: 20vw;\\n  padding: 12px 24px;\\n}\\n\\n.content {\\n  grid-area: content;\\n  padding: 12px 24px;\\n}\\n\\n.project-item {\\n  background: none;\\n  border: none;\\n}\\n\\n.active {\\n  color: rgb(92, 154, 128);\\n}\\n\\n.modal {\\n  display: none; /* Hidden by default */\\n  position: fixed; /* Stay in place */\\n  z-index: 1; /* Sit on top */\\n  padding-top: 100px; /* Location of the box */\\n  left: 0;\\n  top: 0;\\n  width: 100%; /* Full width */\\n  height: 100%; /* Full height */\\n  overflow: auto; /* Enable scroll if needed */\\n  background-color: rgb(0,0,0); /* Fallback color */\\n  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\\n}\\n\\n.modal-content {\\n  background-color: #fefefe;\\n  margin: auto;\\n  padding: 20px;\\n  border: 1px solid #888;\\n  width: 80%;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  margin: 0px;\\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\\n}\\n\\n.container {\\n  display: grid;\\n  grid-template-columns: auto 1fr;\\n  grid-template-rows: auto 1fr;\\n  height: 100vh;\\n  width: 100vw;\\n  grid-template-areas:\\n    \\\"header header\\\"\\n    \\\"nav content\\\"\\n    \\\"nav content\\\";\\n}\\n\\n.header {\\n  background-color: rgb(64, 112, 92);\\n  color: white;\\n  grid-area: header;\\n  padding: 12px 24px;\\n}\\n\\n.sidebar {\\n  background-color: rgba(209, 235, 225, 0.537);\\n  grid-area: nav;\\n  max-width: 20vw;\\n  padding: 12px 24px;\\n}\\n\\n.project-item {\\n  background: none;\\n  border: none;\\n}\\n\\n.content-container {\\n  grid-area: content;\\n  padding: 12px 24px;\\n}\\n\\n.content-header {\\n  display: flex;\\n  align-items: center;\\n}\\n\\n#project-title-btns {\\n  padding-left: 12px;\\n}\\n\\n.active {\\n  color: rgb(92, 154, 128);\\n}\\n\\n.modal {\\n  display: none; /* Hidden by default */\\n  position: fixed; /* Stay in place */\\n  z-index: 1; /* Sit on top */\\n  padding-top: 100px; /* Location of the box */\\n  left: 0;\\n  top: 0;\\n  width: 100%; /* Full width */\\n  height: 100%; /* Full height */\\n  overflow: auto; /* Enable scroll if needed */\\n  background-color: rgb(0,0,0); /* Fallback color */\\n  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\\n}\\n\\n.modal-content {\\n  background-color: #fefefe;\\n  margin: auto;\\n  padding: 20px;\\n  border: 1px solid #888;\\n  width: 80%;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -460,16 +460,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/display.js":
-/*!************************!*\
-  !*** ./src/display.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadPage\": () => (/* binding */ loadPage)\n/* harmony export */ });\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _todoDisplay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoDisplay */ \"./src/todoDisplay.js\");\n\n\n\nconst contentTitle = document.getElementById('content-title');\n\nconst loadPage = () => {\n  contentTitle.textContent = (0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)().name;\n  (0,_todoDisplay__WEBPACK_IMPORTED_MODULE_1__.showTodos)();\n};\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/display.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -477,6 +467,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _projectDisplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projectDisplay */ \"./src/projectDisplay.js\");\n\n\n\n\n(0,_project__WEBPACK_IMPORTED_MODULE_1__.setDefaultProject)();\n(0,_projectDisplay__WEBPACK_IMPORTED_MODULE_2__.showProjects)();\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/mainDisplay.js":
+/*!****************************!*\
+  !*** ./src/mainDisplay.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadPage\": () => (/* binding */ loadPage)\n/* harmony export */ });\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _todoDisplay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todoDisplay */ \"./src/todoDisplay.js\");\n/* harmony import */ var _images_edit_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/edit.png */ \"./src/images/edit.png\");\n/* harmony import */ var _images_delete_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/delete.png */ \"./src/images/delete.png\");\n\n\n\n\n\nconst projectEditImage = document.getElementById('project-edit-image');\nconst projectDeleteImage = document.getElementById('project-delete-image');\n\nconst loadProjectTitle = () => {\n  const contentProjectTitle = document.getElementById('project-title');\n  contentProjectTitle.textContent = (0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)().name;\n  projectEditImage.src = _images_edit_png__WEBPACK_IMPORTED_MODULE_2__;\n  projectEditImage.width = 15;\n  projectDeleteImage.src = _images_delete_png__WEBPACK_IMPORTED_MODULE_3__;\n  projectDeleteImage.width = 15;\n};\n\n// const loadDeleteImage = () => {\n//   projectDeleteImage.src = Delete;\n//   projectDeleteImage.width = 15;\n// };\n\nconst loadPage = () => {\n  loadProjectTitle();\n  (0,_todoDisplay__WEBPACK_IMPORTED_MODULE_1__.showTodos)();\n};\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/mainDisplay.js?");
 
 /***/ }),
 
@@ -496,7 +496,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showProjects\": () => (/* binding */ showProjects)\n/* harmony export */ });\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./display */ \"./src/display.js\");\n\n\n\nconst newProjectButton = document.getElementById('new-project-button');\nconst projectFormModal = document.getElementById('project-form-modal');\nconst newProjectForm = document.getElementById('new-project-form');\nconst newProjectCancel = document.getElementById('new-project-cancel');\nconst projectList = document.getElementById('project-list');\n\nconst clearActiveClass = () => {\n  document.querySelectorAll('.project-item').forEach((projectItem) => {\n    projectItem.classList.remove('active');\n  });\n};\n\nconst assignActiveClass = () => {\n  document.querySelectorAll('.project-item').forEach((projectItem) => {\n    if (_project__WEBPACK_IMPORTED_MODULE_0__.projects[projectItem.id] === (0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)()) {\n      projectItem.classList.add('active');\n    }\n  });\n};\n\nconst selectProject = () => {\n  const projectItems = document.querySelectorAll('.project-item');\n  projectItems.forEach((projectItem) => {\n    projectItem.addEventListener('click', (e) => {\n      clearActiveClass();\n      const index = e.target.id;\n      (0,_project__WEBPACK_IMPORTED_MODULE_0__.setCurrentProject)(index);\n      assignActiveClass();\n      (0,_display__WEBPACK_IMPORTED_MODULE_1__.loadPage)((0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)());\n    });\n  });\n};\n\nconst showProjects = () => {\n  projectList.innerHTML = '';\n  for (let i = 0; i < _project__WEBPACK_IMPORTED_MODULE_0__.projects.length; i += 1) {\n    const projectItem = document.createElement('li');\n    projectItem.classList.add('project-item');\n    projectItem.setAttribute('id', `${i}`);\n    projectItem.textContent = `${_project__WEBPACK_IMPORTED_MODULE_0__.projects[i].name}`;\n\n    projectList.appendChild(projectItem);\n  }\n  (0,_project__WEBPACK_IMPORTED_MODULE_0__.setCurrentProject)(_project__WEBPACK_IMPORTED_MODULE_0__.projects.length - 1);\n  assignActiveClass();\n  (0,_display__WEBPACK_IMPORTED_MODULE_1__.loadPage)((0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)());\n  selectProject();\n};\n\nnewProjectButton.onclick = () => {\n  projectFormModal.style.display = 'block';\n};\n\nnewProjectForm.addEventListener('submit', () => {\n  projectFormModal.style.display = 'none';\n  showProjects();\n});\n\nnewProjectCancel.onclick = () => {\n  projectFormModal.style.display = 'none';\n};\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/projectDisplay.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showProjects\": () => (/* binding */ showProjects)\n/* harmony export */ });\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _mainDisplay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainDisplay */ \"./src/mainDisplay.js\");\n\n\n\nconst newProjectButton = document.getElementById('new-project-button');\nconst projectFormModal = document.getElementById('project-form-modal');\nconst newProjectForm = document.getElementById('new-project-form');\nconst newProjectCancel = document.getElementById('new-project-cancel');\nconst projectList = document.getElementById('project-list');\n\nconst clearActiveClass = () => {\n  document.querySelectorAll('.project-item').forEach((projectItem) => {\n    projectItem.classList.remove('active');\n  });\n};\n\nconst assignActiveClass = () => {\n  document.querySelectorAll('.project-item').forEach((projectItem) => {\n    if (_project__WEBPACK_IMPORTED_MODULE_0__.projects[projectItem.id] === (0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)()) {\n      projectItem.classList.add('active');\n    }\n  });\n};\n\nconst selectProject = () => {\n  const projectItems = document.querySelectorAll('.project-item');\n  projectItems.forEach((projectItem) => {\n    projectItem.addEventListener('click', (e) => {\n      clearActiveClass();\n      const index = e.target.id;\n      (0,_project__WEBPACK_IMPORTED_MODULE_0__.setCurrentProject)(index);\n      assignActiveClass();\n      (0,_mainDisplay__WEBPACK_IMPORTED_MODULE_1__.loadPage)((0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)());\n    });\n  });\n};\n\nconst showProjects = () => {\n  projectList.innerHTML = '';\n  for (let i = 0; i < _project__WEBPACK_IMPORTED_MODULE_0__.projects.length; i += 1) {\n    const projectItem = document.createElement('li');\n    projectItem.classList.add('project-item');\n    projectItem.setAttribute('id', `${i}`);\n    projectItem.textContent = `${_project__WEBPACK_IMPORTED_MODULE_0__.projects[i].name}`;\n\n    projectList.appendChild(projectItem);\n  }\n  (0,_project__WEBPACK_IMPORTED_MODULE_0__.setCurrentProject)(_project__WEBPACK_IMPORTED_MODULE_0__.projects.length - 1);\n  assignActiveClass();\n  (0,_mainDisplay__WEBPACK_IMPORTED_MODULE_1__.loadPage)((0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)());\n  selectProject();\n};\n\nnewProjectButton.onclick = () => {\n  projectFormModal.style.display = 'block';\n};\n\nnewProjectForm.addEventListener('submit', () => {\n  projectFormModal.style.display = 'none';\n  showProjects();\n});\n\nnewProjectCancel.onclick = () => {\n  projectFormModal.style.display = 'none';\n};\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/projectDisplay.js?");
 
 /***/ }),
 
@@ -517,6 +517,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showTodos\": () => (/* binding */ showTodos)\n/* harmony export */ });\n/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ \"./node_modules/date-fns/esm/format/index.js\");\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n\n\n\n\nconst newTodoButton = document.getElementById('new-todo-button');\nconst todoFormModal = document.getElementById('todo-form-modal');\nconst newTodoForm = document.getElementById('new-todo-form');\nconst newTodoCancel = document.getElementById('new-todo-cancel');\nconst todoContainer = document.getElementById('todo-container');\n\nconst showTodos = () => {\n  const project = (0,_project__WEBPACK_IMPORTED_MODULE_0__.getCurrentProject)();\n  todoContainer.innerHTML = '';\n  for (let i = 0; i < project.todos.length; i += 1) {\n    const todoDiv = document.createElement('div');\n    todoDiv.classList.add('todo-item');\n    todoDiv.setAttribute('id', `todo-${i}`);\n    todoDiv.textContent = `${project.todos[i].title} - ${project.todos[i].desc} - ${(0,date_fns__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(new Date(project.todos[i].dueDate), 'PP')} - ${project.todos[i].priority}`;\n\n    const deleteButton = document.createElement('button');\n    deleteButton.textContent = 'Delete';\n    todoDiv.appendChild(deleteButton);\n    deleteButton.addEventListener('click', () => (0,_todo__WEBPACK_IMPORTED_MODULE_1__.deleteTodo)(i));\n\n    todoContainer.appendChild(todoDiv);\n  }\n};\n\nnewTodoButton.onclick = () => {\n  todoFormModal.style.display = 'block';\n};\n\nnewTodoForm.addEventListener('submit', () => {\n  todoFormModal.style.display = 'none';\n  showTodos();\n});\n\nnewTodoCancel.onclick = () => {\n  todoFormModal.style.display = 'none';\n};\n\n\n\n\n//# sourceURL=webpack://odin-js-todo-list/./src/todoDisplay.js?");
+
+/***/ }),
+
+/***/ "./src/images/delete.png":
+/*!*******************************!*\
+  !*** ./src/images/delete.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1ce1f523c16f7af7ecc0.png\";\n\n//# sourceURL=webpack://odin-js-todo-list/./src/images/delete.png?");
+
+/***/ }),
+
+/***/ "./src/images/edit.png":
+/*!*****************************!*\
+  !*** ./src/images/edit.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0f46e2728eb984e21ce8.png\";\n\n//# sourceURL=webpack://odin-js-todo-list/./src/images/edit.png?");
 
 /***/ }),
 
@@ -581,6 +601,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -595,6 +627,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
