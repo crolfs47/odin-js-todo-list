@@ -1,7 +1,8 @@
 const projects = [];
 let currentProject = '';
 const newProjectForm = document.getElementById('new-project-form');
-const projectDeleteImage = document.getElementById('project-delete-image');
+const editProjectForm = document.getElementById('edit-project-form');
+const projectDeleteIcon = document.getElementById('project-delete-image');
 
 const projectFactory = (name) => ({
   name,
@@ -37,8 +38,16 @@ const deleteProject = () => {
   }
 };
 
+const editProject = (e) => {
+  e.preventDefault();
+  currentProject = getCurrentProject();
+  const name = document.getElementById('edit-project-name').value;
+  currentProject.name = name;
+};
+
 newProjectForm.addEventListener('submit', addProject);
-projectDeleteImage.addEventListener('click', deleteProject);
+editProjectForm.addEventListener('submit', editProject);
+projectDeleteIcon.addEventListener('click', deleteProject);
 
 export {
   projectFactory, projects, setCurrentProject, getCurrentProject, setDefaultProject,

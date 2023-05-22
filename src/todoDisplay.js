@@ -21,8 +21,8 @@ const showTodos = () => {
 
     const todoBtns = document.createElement('div');
     todoBtns.classList.add('edit-delete-btns');
-    todoDiv.appendChild(todoBtns)
-    
+    todoDiv.appendChild(todoBtns);
+
     const editIcon = document.createElement('img');
     editIcon.src = Edit;
     editIcon.width = 15;

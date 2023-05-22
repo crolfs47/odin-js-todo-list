@@ -6,7 +6,12 @@ const projectFormModal = document.getElementById('project-form-modal');
 const newProjectForm = document.getElementById('new-project-form');
 const newProjectCancel = document.getElementById('new-project-cancel');
 const projectList = document.getElementById('project-list');
-const projectDeleteImage = document.getElementById('project-delete-image');
+
+const projectEditIcon = document.getElementById('project-edit-image');
+const editProjectFormModal = document.getElementById('edit-project-form-modal');
+const editProjectForm = document.getElementById('edit-project-form');
+const editProjectCancel = document.getElementById('edit-project-cancel')
+const projectDeleteIcon = document.getElementById('project-delete-image');
 
 const clearActiveClass = () => {
   document.querySelectorAll('.project-item').forEach((projectItem) => {
@@ -63,7 +68,22 @@ newProjectCancel.onclick = () => {
   projectFormModal.style.display = 'none';
 };
 
-projectDeleteImage.onclick = () => {
+projectEditIcon.onclick = () => {
+  editProjectFormModal.style.display = 'block';
+  const currentProject = getCurrentProject();
+  document.getElementById('edit-project-name').placeholder = currentProject.name;
+};
+
+editProjectForm.addEventListener('submit', () => {
+  editProjectFormModal.style.display = 'none';
+  showProjects();
+});
+
+editProjectCancel.onclick = () => {
+  editProjectFormModal.style.display = 'none';
+};
+
+projectDeleteIcon.onclick = () => {
   showProjects();
 };
 
