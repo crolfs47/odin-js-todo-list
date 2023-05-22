@@ -27,9 +27,11 @@ const addTodo = (e) => {
 
 const deleteTodo = (i) => {
   const currentProject = getCurrentProject();
-  currentProject.todos.splice(i, 1);
-  const todoDiv = document.getElementById(`todo-${i}`);
-  todoDiv.remove();
+  if (window.confirm('Are you sure you want to delete this task?')) {
+    currentProject.todos.splice(i, 1);
+    const todoDiv = document.getElementById(`todo-${i}`);
+    todoDiv.remove();
+  }
 };
 
 newTodoForm.addEventListener('submit', addTodo);

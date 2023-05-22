@@ -31,8 +31,10 @@ const addProject = (e) => {
 const deleteProject = () => {
   currentProject = getCurrentProject();
   const index = projects.indexOf(currentProject);
-  projects.splice(index, 1);
-  console.log(projects);
+  if (window.confirm('Are you sure you want to delete this project and all its tasks?')) {
+    projects.splice(index, 1);
+    setCurrentProject(0);
+  }
 };
 
 newProjectForm.addEventListener('submit', addProject);

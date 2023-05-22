@@ -64,7 +64,6 @@ newProjectCancel.onclick = () => {
 };
 
 projectDeleteImage.onclick = () => {
-  setCurrentProject(0);
   showProjects();
 };
 
