@@ -30,7 +30,7 @@ const selectProject = () => {
       const index = e.target.id;
       setCurrentProject(index);
       assignActiveClass();
-      loadPage(getCurrentProject());
+      loadPage();
     });
   });
 };
@@ -46,7 +46,7 @@ const showProjects = () => {
     projectList.appendChild(projectItem);
   }
   assignActiveClass();
-  loadPage(getCurrentProject());
+  loadPage();
   selectProject();
 };
 
