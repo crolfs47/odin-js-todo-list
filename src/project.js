@@ -41,8 +41,7 @@ const deleteProject = () => {
 const editProject = (e) => {
   e.preventDefault();
   currentProject = getCurrentProject();
-  const name = document.getElementById('edit-project-name').value;
-  currentProject.name = name;
+  currentProject.name = document.getElementById('edit-project-name').value;
 };
 
 newProjectForm.addEventListener('submit', addProject);

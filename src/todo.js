@@ -1,7 +1,9 @@
 import { getCurrentProject } from './project';
 
 const todos = [];
+let todoIndex = '';
 const newTodoForm = document.getElementById('new-todo-form');
+const editTodoForm = document.getElementById('edit-todo-form');
 
 const todoFactory = (title, desc, dueDate, priority) => ({
   title,
@@ -25,6 +27,10 @@ const addTodo = (e) => {
   currentProject.todos.push(newTodo);
 };
 
+const getTodoIndex = (i) => {
+  todoIndex = i;
+};
+
 const deleteTodo = (i) => {
   const currentProject = getCurrentProject();
   if (window.confirm('Are you sure you want to delete this task?')) {
@@ -34,6 +40,19 @@ const deleteTodo = (i) => {
   }
 };
 
-newTodoForm.addEventListener('submit', addTodo);
+const editTodo = (e) => {
+  e.preventDefault();
+  const currentProject = getCurrentProject();
+  const todo = currentProject.todos[todoIndex];
+  todo.title = document.getElementById('edit-title').value;
+  todo.description = document.getElementById('edit-description').value;
+  todo.date = document.getElementById('edit-date').value;
+  todo.priority = document.getElementById('edit-priority').value;
+};
 
-export { todoFactory, deleteTodo, todos };
+newTodoForm.addEventListener('submit', addTodo);
+editTodoForm.addEventListener('submit', editTodo);
+
+export {
+  todoFactory, deleteTodo, getTodoIndex, todos,
+};

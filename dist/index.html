@@ -76,7 +76,28 @@
               </form>
             </div>
           </div>
-          <div id="todo-container"></div>
+          <div id="edit-todo-form-modal" class="modal">
+            <div class="modal-content">
+              <form id="edit-todo-form">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="edit-title" required />
+                <label for="description">Description</label>
+                <input type="text" name="description" id="edit-description" required />
+                <label for="date">Due Date</label>
+                <input type="date" name="date" id="edit-date" required />
+                <label for="priority">Priority</label>
+                <select name="priority" id="edit-priority">
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+                <input type="submit" value="Edit" id="edit-todo-submit" />
+                <button type="button" id="edit-todo-cancel">Cancel</button>
+              </form>
+            </div>
+          </div>
+          <div id="todo-container">
+          </div>
         </div>
       </div>
       <footer class="footer"></footer>

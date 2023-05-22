@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import { getCurrentProject } from './project';
-import { deleteTodo } from './todo';
+import { deleteTodo, getTodoIndex } from './todo';
 import Edit from './images/edit.png';
 import Delete from './images/delete.png';
 
@@ -9,6 +9,10 @@ const todoFormModal = document.getElementById('todo-form-modal');
 const newTodoForm = document.getElementById('new-todo-form');
 const newTodoCancel = document.getElementById('new-todo-cancel');
 const todoContainer = document.getElementById('todo-container');
+
+const editTodoFormModal = document.getElementById('edit-todo-form-modal');
+const editTodoForm = document.getElementById('edit-todo-form');
+const editTodoCancel = document.getElementById('edit-todo-cancel');
 
 const showTodos = () => {
   const project = getCurrentProject();
@@ -23,17 +27,22 @@ const showTodos = () => {
     todoBtns.classList.add('edit-delete-btns');
     todoDiv.appendChild(todoBtns);
 
-    const editIcon = document.createElement('img');
-    editIcon.src = Edit;
-    editIcon.width = 15;
-    todoBtns.appendChild(editIcon);
-    // editIcon.addEventListener('click', () => editTodo(i));
+    const todoEditIcon = document.createElement('img');
+    todoEditIcon.setAttribute('id', 'todo-edit-image');
+    todoEditIcon.src = Edit;
+    todoEditIcon.width = 15;
+    todoBtns.appendChild(todoEditIcon);
+    todoEditIcon.addEventListener('click', () => {
+      editTodoFormModal.style.display = 'block';
+      getTodoIndex(i);
+    });
 
-    const deleteIcon = document.createElement('img');
-    deleteIcon.src = Delete;
-    deleteIcon.width = 15;
-    todoBtns.appendChild(deleteIcon);
-    deleteIcon.addEventListener('click', () => deleteTodo(i));
+    const todoDeleteIcon = document.createElement('img');
+    todoDeleteIcon.setAttribute('id', 'todo-delete-image');
+    todoDeleteIcon.src = Delete;
+    todoDeleteIcon.width = 15;
+    todoBtns.appendChild(todoDeleteIcon);
+    todoDeleteIcon.addEventListener('click', () => deleteTodo(i));
 
     todoContainer.appendChild(todoDiv);
   }
@@ -50,6 +59,15 @@ newTodoForm.addEventListener('submit', () => {
 
 newTodoCancel.onclick = () => {
   todoFormModal.style.display = 'none';
+};
+
+editTodoForm.addEventListener('submit', () => {
+  editTodoFormModal.style.display = 'none';
+  showTodos();
+});
+
+editTodoCancel.onclick = () => {
+  editTodoFormModal.style.display = 'none';
 };
 
 export { showTodos };
