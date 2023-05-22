@@ -44,7 +44,7 @@ body {
   align-items: center;
 }
 
-#project-title-btns {
+.edit-delete-btns {
   padding-left: 12px;
 }
 
@@ -76,5 +76,9 @@ body {
 
 #new-todo-button {
   display: none;
+}
+
+.todo-item {
+  display: flex;
 }
 

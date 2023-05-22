@@ -1,6 +1,8 @@
 import { format } from 'date-fns';
 import { getCurrentProject } from './project';
 import { deleteTodo } from './todo';
+import Edit from './images/edit.png';
+import Delete from './images/delete.png';
 
 const newTodoButton = document.getElementById('new-todo-button');
 const todoFormModal = document.getElementById('todo-form-modal');
@@ -17,10 +19,21 @@ const showTodos = () => {
     todoDiv.setAttribute('id', `todo-${i}`);
     todoDiv.textContent = `${project.todos[i].title} - ${project.todos[i].desc} - ${format(new Date(project.todos[i].dueDate), 'PP')} - ${project.todos[i].priority}`;
 
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    todoDiv.appendChild(deleteButton);
-    deleteButton.addEventListener('click', () => deleteTodo(i));
+    const todoBtns = document.createElement('div');
+    todoBtns.classList.add('edit-delete-btns');
+    todoDiv.appendChild(todoBtns)
+    
+    const editIcon = document.createElement('img');
+    editIcon.src = Edit;
+    editIcon.width = 15;
+    todoBtns.appendChild(editIcon);
+    // editIcon.addEventListener('click', () => editTodo(i));
+
+    const deleteIcon = document.createElement('img');
+    deleteIcon.src = Delete;
+    deleteIcon.width = 15;
+    todoBtns.appendChild(deleteIcon);
+    deleteIcon.addEventListener('click', () => deleteTodo(i));
 
     todoContainer.appendChild(todoDiv);
   }
