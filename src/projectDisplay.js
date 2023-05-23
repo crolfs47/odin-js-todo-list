@@ -71,7 +71,7 @@ newProjectCancel.onclick = () => {
 projectEditIcon.onclick = () => {
   editProjectFormModal.style.display = 'block';
   const currentProject = getCurrentProject();
-  document.getElementById('edit-project-name').placeholder = currentProject.name;
+  document.getElementById('edit-project-name').value = currentProject.name;
 };
 
 editProjectForm.addEventListener('submit', () => {

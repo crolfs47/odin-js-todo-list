@@ -35,6 +35,10 @@ const showTodos = () => {
     todoBtns.appendChild(todoEditIcon);
     todoEditIcon.addEventListener('click', () => {
       editTodoFormModal.style.display = 'block';
+      document.getElementById('edit-title').value = project.todos[i].title;
+      document.getElementById('edit-description').value = project.todos[i].desc;
+      document.getElementById('edit-date').value = project.todos[i].dueDate;
+      document.getElementById('edit-priority').value = project.todos[i].priority;
       getTodoIndex(i);
     });
 
