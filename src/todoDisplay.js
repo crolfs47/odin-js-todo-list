@@ -29,6 +29,7 @@ const showTodos = () => {
 
     const todoEditIcon = document.createElement('img');
     todoEditIcon.setAttribute('id', 'todo-edit-image');
+    todoEditIcon.classList.add('image-link');
     todoEditIcon.src = Edit;
     todoEditIcon.width = 15;
     todoBtns.appendChild(todoEditIcon);
@@ -39,6 +40,7 @@ const showTodos = () => {
 
     const todoDeleteIcon = document.createElement('img');
     todoDeleteIcon.setAttribute('id', 'todo-delete-image');
+    todoDeleteIcon.classList.add('image-link');
     todoDeleteIcon.src = Delete;
     todoDeleteIcon.width = 15;
     todoBtns.appendChild(todoDeleteIcon);
