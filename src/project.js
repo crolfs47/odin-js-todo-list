@@ -27,6 +27,7 @@ const addProject = (e) => {
   const newProject = projectFactory(name);
   projects.push(newProject);
   setCurrentProject(projects.length - 1);
+  newProjectForm.reset();
 };
 
 const deleteProject = () => {

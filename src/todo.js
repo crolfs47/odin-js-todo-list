@@ -25,6 +25,8 @@ const addTodo = (e) => {
 
   const currentProject = getCurrentProject();
   currentProject.todos.push(newTodo);
+  newTodoForm.reset();
+  console.log(todos);
 };
 
 const getTodoIndex = (i) => {
