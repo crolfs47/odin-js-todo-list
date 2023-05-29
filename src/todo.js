@@ -47,8 +47,8 @@ const editTodo = (e) => {
   const currentProject = getCurrentProject();
   const todo = currentProject.todos[todoIndex];
   todo.title = document.getElementById('edit-title').value;
-  todo.description = document.getElementById('edit-description').value;
-  todo.date = document.getElementById('edit-date').value;
+  todo.desc = document.getElementById('edit-description').value;
+  todo.dueDate = document.getElementById('edit-date').value;
   todo.priority = document.getElementById('edit-priority').value;
 };
 

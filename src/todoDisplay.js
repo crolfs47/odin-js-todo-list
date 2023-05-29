@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { getCurrentProject } from './project';
 import { deleteTodo, getTodoIndex } from './todo';
 import Edit from './images/edit.png';
@@ -14,6 +14,8 @@ const editTodoFormModal = document.getElementById('edit-todo-form-modal');
 const editTodoForm = document.getElementById('edit-todo-form');
 const editTodoCancel = document.getElementById('edit-todo-cancel');
 
+const formatDate = (date) => `${date}T00:00:00`;
+
 const showTodos = () => {
   const project = getCurrentProject();
   todoContainer.innerHTML = '';
@@ -21,7 +23,7 @@ const showTodos = () => {
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo-item');
     todoDiv.setAttribute('id', `todo-${i}`);
-    todoDiv.textContent = `${project.todos[i].title} - ${project.todos[i].desc} - ${format(new Date(project.todos[i].dueDate), 'PP')} - ${project.todos[i].priority}`;
+    todoDiv.textContent = `${project.todos[i].title} - ${project.todos[i].desc} - ${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')} - ${project.todos[i].priority}`;
 
     const todoBtns = document.createElement('div');
     todoBtns.classList.add('edit-delete-btns');
