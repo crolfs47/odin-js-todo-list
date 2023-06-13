@@ -38,6 +38,7 @@ const deleteProject = () => {
   const index = projects.indexOf(currentProject);
   if (window.confirm('Are you sure you want to delete this project and all its tasks?')) {
     projects.splice(index, 1);
+    localStorage.setItem('projects', JSON.stringify(projects));
     setCurrentProject(0);
   }
 };

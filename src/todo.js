@@ -1,6 +1,5 @@
 import { getCurrentProject, projects } from './project';
 
-const todos = JSON.parse(localStorage.getItem('todos'));
 let todoIndex = '';
 const newTodoForm = document.getElementById('new-todo-form');
 const editTodoForm = document.getElementById('edit-todo-form');
@@ -21,7 +20,6 @@ const addTodo = (e) => {
   const priority = document.getElementById('priority').value;
 
   const newTodo = todoFactory(title, description, date, priority);
-  todos.push(newTodo);
 
   const currentProject = getCurrentProject();
   currentProject.todos.push(newTodo);
@@ -38,6 +36,7 @@ const deleteTodo = (i) => {
   const currentProject = getCurrentProject();
   if (window.confirm('Are you sure you want to delete this task?')) {
     currentProject.todos.splice(i, 1);
+    localStorage.setItem('projects', JSON.stringify(projects));
     const todoDiv = document.getElementById(`todo-${i}`);
     todoDiv.remove();
   }
@@ -57,5 +56,5 @@ newTodoForm.addEventListener('submit', addTodo);
 editTodoForm.addEventListener('submit', editTodo);
 
 export {
-  todoFactory, deleteTodo, getTodoIndex, todos,
+  todoFactory, deleteTodo, getTodoIndex,
 };
