@@ -1,4 +1,4 @@
-import { format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
 import { getCurrentProject } from './project';
 import { deleteTodo, getTodoIndex } from './todo';
 import Edit from './images/edit.png';
@@ -21,9 +21,26 @@ const showTodos = () => {
   todoContainer.innerHTML = '';
   for (let i = 0; i < project.todos.length; i += 1) {
     const todoDiv = document.createElement('div');
+    todoContainer.appendChild(todoDiv);
     todoDiv.classList.add('todo-item');
     todoDiv.setAttribute('id', `todo-${i}`);
-    todoDiv.textContent = `${project.todos[i].title} - ${project.todos[i].desc} - ${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')} - ${project.todos[i].priority}`;
+
+    const todoCompleteDiv = document.createElement('div');
+    todoCompleteDiv.classList.add('complete-checkbox');
+    todoDiv.appendChild(todoCompleteDiv);
+    todoCompleteDiv.innerHTML = `
+      <label for="complete">
+      <input type="checkbox" id="complete" name="complete" value="yes">
+      </label>`;
+
+    const todoTextDiv = document.createElement('div');
+    todoTextDiv.classList.add('todo-text');
+    todoTextDiv.innerHTML = `
+      <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')}</span>
+      <span class="todo-title">${project.todos[i].priority}</span>
+      <span class="todo-title">${project.todos[i].title}</span>
+      <span class="todo-desc">${project.todos[i].desc}</span>`;
+    todoDiv.appendChild(todoTextDiv);
 
     const todoBtns = document.createElement('div');
     todoBtns.classList.add('edit-delete-btns');
@@ -51,8 +68,6 @@ const showTodos = () => {
     todoDeleteIcon.width = 15;
     todoBtns.appendChild(todoDeleteIcon);
     todoDeleteIcon.addEventListener('click', () => deleteTodo(i));
-
-    todoContainer.appendChild(todoDiv);
   }
 };
 

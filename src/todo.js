@@ -23,7 +23,6 @@ const addTodo = (e) => {
 
   const currentProject = getCurrentProject();
   currentProject.todos.push(newTodo);
-  localStorage.setItem('todos', JSON.stringify(todos));
   localStorage.setItem('projects', JSON.stringify(projects));
   newTodoForm.reset();
 };
