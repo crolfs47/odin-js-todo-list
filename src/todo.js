@@ -1,6 +1,6 @@
-import { getCurrentProject } from './project';
+import { getCurrentProject, projects } from './project';
 
-const todos = [];
+const todos = JSON.parse(localStorage.getItem('todos'));
 let todoIndex = '';
 const newTodoForm = document.getElementById('new-todo-form');
 const editTodoForm = document.getElementById('edit-todo-form');
@@ -25,8 +25,9 @@ const addTodo = (e) => {
 
   const currentProject = getCurrentProject();
   currentProject.todos.push(newTodo);
+  localStorage.setItem('todos', JSON.stringify(todos));
+  localStorage.setItem('projects', JSON.stringify(projects));
   newTodoForm.reset();
-  console.log(todos);
 };
 
 const getTodoIndex = (i) => {

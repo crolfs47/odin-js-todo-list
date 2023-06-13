@@ -1,4 +1,4 @@
-const projects = [];
+const projects = JSON.parse(localStorage.getItem('projects'));
 let currentProject = '';
 const newProjectForm = document.getElementById('new-project-form');
 const editProjectForm = document.getElementById('edit-project-form');
@@ -26,6 +26,7 @@ const addProject = (e) => {
   const name = document.getElementById('project-name').value;
   const newProject = projectFactory(name);
   projects.push(newProject);
+  localStorage.setItem('projects', JSON.stringify(projects));
   setCurrentProject(projects.length - 1);
   newProjectForm.reset();
 };
