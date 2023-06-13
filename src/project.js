@@ -14,8 +14,10 @@ const setCurrentProject = (index) => {
 };
 
 const setDefaultProject = () => {
-  const defaultProject = projectFactory('General');
-  projects.push(defaultProject);
+  if (projects === []) {
+    const defaultProject = projectFactory('General');
+    projects.push(defaultProject);
+  }
   setCurrentProject(0);
 };
 
