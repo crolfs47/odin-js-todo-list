@@ -50,6 +50,7 @@ const editTodo = (e) => {
   todo.desc = document.getElementById('edit-description').value;
   todo.dueDate = document.getElementById('edit-date').value;
   todo.priority = document.getElementById('edit-priority').value;
+  localStorage.setItem('projects', JSON.stringify(projects));
 };
 
 newTodoForm.addEventListener('submit', addTodo);

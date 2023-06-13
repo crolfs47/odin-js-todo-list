@@ -47,6 +47,7 @@ const editProject = (e) => {
   e.preventDefault();
   currentProject = getCurrentProject();
   currentProject.name = document.getElementById('edit-project-name').value;
+  localStorage.setItem('projects', JSON.stringify(projects));
 };
 
 newProjectForm.addEventListener('submit', addProject);
