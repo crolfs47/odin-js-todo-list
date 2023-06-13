@@ -30,7 +30,7 @@ const showTodos = () => {
     todoDiv.appendChild(todoCompleteDiv);
     todoCompleteDiv.innerHTML = `
       <label for="complete">
-      <input type="checkbox" id="complete" name="complete" value="yes">
+      <input type="checkbox" id="complete" name="complete" ${project.todos[i].completed ? 'checked' : ''}>
       </label>`;
 
     const todoTextDiv = document.createElement('div');
