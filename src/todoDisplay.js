@@ -20,6 +20,8 @@ const addCompleteListener = () => {
   document.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
     checkbox.addEventListener('change', () => {
       markComplete(checkbox.dataset.index);
+      const todoTextDiv = document.getElementById(`todo-text-${checkbox.dataset.index}`);
+      todoTextDiv.classList.toggle('completed');
     });
   });
 };
@@ -31,6 +33,7 @@ const showTodos = () => {
     const todoDiv = document.createElement('div');
     todoContainer.appendChild(todoDiv);
     todoDiv.classList.add('todo-item');
+
     todoDiv.setAttribute('id', `todo-${i}`);
 
     const todoCompleteDiv = document.createElement('div');
@@ -41,6 +44,10 @@ const showTodos = () => {
 
     const todoTextDiv = document.createElement('div');
     todoTextDiv.classList.add('todo-text');
+    if (project.todos[i].completed) {
+      todoTextDiv.classList.add('completed');
+    }
+    todoTextDiv.setAttribute('id', `todo-text-${i}`);
     todoTextDiv.innerHTML = `
       <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')}</span>
       <span class="todo-title">${project.todos[i].priority}</span>
