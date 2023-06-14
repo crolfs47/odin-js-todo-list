@@ -21,7 +21,7 @@ const clearActiveClass = () => {
 
 const assignActiveClass = () => {
   document.querySelectorAll('.project-item').forEach((projectItem) => {
-    if (projects[projectItem.id] === getCurrentProject()) {
+    if (projects[projectItem.dataset.index] === getCurrentProject()) {
       projectItem.classList.add('active');
     }
   });
@@ -32,7 +32,7 @@ const selectProject = () => {
   projectItems.forEach((projectItem) => {
     projectItem.addEventListener('click', (e) => {
       clearActiveClass();
-      const index = e.target.id;
+      const index = e.target.dataset.index;
       setCurrentProject(index);
       assignActiveClass();
       loadPage();
@@ -45,7 +45,7 @@ const showProjects = () => {
   for (let i = 0; i < projects.length; i += 1) {
     const projectItem = document.createElement('li');
     projectItem.classList.add('project-item');
-    projectItem.setAttribute('id', `${i}`);
+    projectItem.setAttribute('data-index', i);
     projectItem.textContent = `${projects[i].name}`;
 
     projectList.appendChild(projectItem);

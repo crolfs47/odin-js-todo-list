@@ -27,6 +27,7 @@ const showTodos = () => {
 
     const todoCompleteDiv = document.createElement('div');
     todoCompleteDiv.classList.add('complete-checkbox');
+    todoCompleteDiv.setAttribute('data-index', i);
     todoDiv.appendChild(todoCompleteDiv);
     todoCompleteDiv.innerHTML = `
       <label for="complete">
@@ -69,6 +70,14 @@ const showTodos = () => {
     todoBtns.appendChild(todoDeleteIcon);
     todoDeleteIcon.addEventListener('click', () => deleteTodo(i));
   }
+};
+
+const markComplete = () => {
+  document.querySelectorAll('complete-checkbox').forEach((checkbox) => {
+    checkbox.onclick = () => {
+      console.log(checkbox.id);
+    };
+  });
 };
 
 newTodoButton.onclick = () => {
