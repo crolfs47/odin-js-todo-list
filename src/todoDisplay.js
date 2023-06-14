@@ -30,9 +30,7 @@ const showTodos = () => {
     todoCompleteDiv.setAttribute('data-index', i);
     todoDiv.appendChild(todoCompleteDiv);
     todoCompleteDiv.innerHTML = `
-      <label for="complete">
-      <input type="checkbox" id="complete" name="complete" ${project.todos[i].completed ? 'checked' : ''}>
-      </label>`;
+      <input type="checkbox" name="complete" ${project.todos[i].completed ? 'checked' : ''}>`;
 
     const todoTextDiv = document.createElement('div');
     todoTextDiv.classList.add('todo-text');
@@ -48,7 +46,6 @@ const showTodos = () => {
     todoDiv.appendChild(todoBtns);
 
     const todoEditIcon = document.createElement('img');
-    todoEditIcon.setAttribute('id', 'todo-edit-image');
     todoEditIcon.classList.add('image-link');
     todoEditIcon.src = Edit;
     todoEditIcon.width = 15;
@@ -63,7 +60,6 @@ const showTodos = () => {
     });
 
     const todoDeleteIcon = document.createElement('img');
-    todoDeleteIcon.setAttribute('id', 'todo-delete-image');
     todoDeleteIcon.classList.add('image-link');
     todoDeleteIcon.src = Delete;
     todoDeleteIcon.width = 15;
