@@ -52,9 +52,15 @@ const editTodo = (e) => {
   localStorage.setItem('projects', JSON.stringify(projects));
 };
 
+const markComplete = (i) => {
+  const currentProject = getCurrentProject();
+  currentProject.todos[i].completed = !currentProject.todos[i].completed;
+  localStorage.setItem('projects', JSON.stringify(projects));
+};
+
 newTodoForm.addEventListener('submit', addTodo);
 editTodoForm.addEventListener('submit', editTodo);
 
 export {
-  todoFactory, deleteTodo, getTodoIndex,
+  todoFactory, deleteTodo, getTodoIndex, markComplete,
 };

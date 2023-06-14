@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import { getCurrentProject } from './project';
-import { deleteTodo, getTodoIndex } from './todo';
+import { deleteTodo, getTodoIndex, markComplete } from './todo';
 import Edit from './images/edit.png';
 import Delete from './images/delete.png';
 
@@ -16,6 +16,14 @@ const editTodoCancel = document.getElementById('edit-todo-cancel');
 
 const formatDate = (date) => `${date}T00:00:00`;
 
+const addCompleteListener = () => {
+  document.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      markComplete(checkbox.dataset.index);
+    });
+  });
+};
+
 const showTodos = () => {
   const project = getCurrentProject();
   todoContainer.innerHTML = '';
@@ -27,10 +35,9 @@ const showTodos = () => {
 
     const todoCompleteDiv = document.createElement('div');
     todoCompleteDiv.classList.add('complete-checkbox');
-    todoCompleteDiv.setAttribute('data-index', i);
     todoDiv.appendChild(todoCompleteDiv);
     todoCompleteDiv.innerHTML = `
-      <input type="checkbox" name="complete" ${project.todos[i].completed ? 'checked' : ''}>`;
+      <input type="checkbox" name="complete" data-index="${i}" ${project.todos[i].completed ? 'checked' : ''}>`;
 
     const todoTextDiv = document.createElement('div');
     todoTextDiv.classList.add('todo-text');
@@ -66,14 +73,7 @@ const showTodos = () => {
     todoBtns.appendChild(todoDeleteIcon);
     todoDeleteIcon.addEventListener('click', () => deleteTodo(i));
   }
-};
-
-const markComplete = () => {
-  document.querySelectorAll('complete-checkbox').forEach((checkbox) => {
-    checkbox.onclick = () => {
-      console.log(checkbox.id);
-    };
-  });
+  addCompleteListener();
 };
 
 newTodoButton.onclick = () => {
