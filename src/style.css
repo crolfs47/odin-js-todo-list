@@ -1,9 +1,11 @@
+@import 'bulma/css/bulma.css';
+
 body {
   margin: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container {
+.page-container {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
@@ -25,7 +27,7 @@ body {
 .sidebar {
   background-color: rgba(209, 235, 225, 0.537);
   grid-area: nav;
-  max-width: 20vw;
+  max-width: 25vw;
   padding: 12px 24px;
 }
 
@@ -50,7 +52,9 @@ body {
 }
 
 .edit-delete-btns {
-  padding-left: 12px;
+  padding-left: 24px;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .image-link:hover {
@@ -87,15 +91,34 @@ body {
   display: none;
 }
 
-.todo-item {
-  display: flex;
-}
-
 button:hover {
   cursor: pointer;
 }
 
 .completed {
   text-decoration: line-through;
+}
+
+.complete-checkbox {
+  padding-right: 12px;
+}
+
+.todo-item {
+  display: flex;
+}
+
+.todo-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.todo-title-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-date-priority {
+  margin-left: 1px;
 }
 

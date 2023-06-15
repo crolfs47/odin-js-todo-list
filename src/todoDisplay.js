@@ -32,7 +32,7 @@ const showTodos = () => {
   for (let i = 0; i < project.todos.length; i += 1) {
     const todoDiv = document.createElement('div');
     todoContainer.appendChild(todoDiv);
-    todoDiv.classList.add('todo-item');
+    todoDiv.classList.add('todo-item', 'box');
 
     todoDiv.setAttribute('id', `todo-${i}`);
 
@@ -49,10 +49,14 @@ const showTodos = () => {
     }
     todoTextDiv.setAttribute('id', `todo-text-${i}`);
     todoTextDiv.innerHTML = `
-      <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')}</span>
-      <span class="todo-title">${project.todos[i].priority}</span>
-      <span class="todo-title">${project.todos[i].title}</span>
-      <span class="todo-desc">${project.todos[i].desc}</span>`;
+        <div class="todo-title-desc">
+          <span class="todo-title has-text-weight-semibold">${project.todos[i].title}</span>
+          <span class="todo-desc is-size-7">${project.todos[i].desc}</span>
+        </div>
+        <div class="todo-date-priority">  
+          <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')}</span>
+          <span class="todo-priority">${project.todos[i].priority}</span>
+        </div>`;
     todoDiv.appendChild(todoTextDiv);
 
     const todoBtns = document.createElement('div');
