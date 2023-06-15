@@ -103,6 +103,10 @@ button:hover {
   padding-right: 12px;
 }
 
+.box {
+  padding: 10px 20px;
+}
+
 .todo-item {
   display: flex;
 }

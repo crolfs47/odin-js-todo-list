@@ -26,6 +26,24 @@ const addCompleteListener = () => {
   });
 };
 
+const showPriority = (priority) => {
+  let priorityHTML = '';
+  if (priority === 'high') {
+    priorityHTML = `<span class="icon has-text-danger">
+                          <i class="fas fa-exclamation-triangle"></i>
+                        </span>`;
+  } else if (priority === 'medium') {
+    priorityHTML = `<span class="icon has-text-warning">
+                          <i class="fas fa-exclamation-triangle"></i>
+                        </span>`;
+  } else if (priority === 'low') {
+    priorityHTML = `<span class="icon has-text-success">
+                          <i class="fas fa-exclamation-triangle"></i>
+                        </span>`;
+  }
+  return priorityHTML;
+};
+
 const showTodos = () => {
   const project = getCurrentProject();
   todoContainer.innerHTML = '';
@@ -55,7 +73,7 @@ const showTodos = () => {
         </div>
         <div class="todo-date-priority">  
           <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')}</span>
-          <span class="todo-priority">${project.todos[i].priority}</span>
+          <span class="todo-priority">${showPriority(project.todos[i].priority)}</span>
         </div>`;
     todoDiv.appendChild(todoTextDiv);
 
