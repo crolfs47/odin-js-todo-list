@@ -33,6 +33,10 @@ h2 {
   padding-right: 12px;
 }
 
+label {
+  padding-right: 12px;
+}
+
 .page-container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -188,5 +192,9 @@ button:hover {
 
 .todo-date-priority {
   margin-left: 1px;
+}
+
+.date-input {
+  max-width: 125px;
 }
 
