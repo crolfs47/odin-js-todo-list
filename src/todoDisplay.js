@@ -71,14 +71,14 @@ const showTodos = () => {
           <span class="todo-title has-text-weight-semibold">${project.todos[i].title}</span>
           <span class="todo-desc is-size-7">${project.todos[i].desc}</span>
         </div>
-        <div class="todo-date-priority">  
+        <div class="todo-date-priority is-flex">  
           <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'P')}</span>
           <span class="todo-priority">${showPriority(project.todos[i].priority)}</span>
         </div>`;
     todoDiv.appendChild(todoTextDiv);
 
     const todoBtns = document.createElement('div');
-    todoBtns.classList.add('edit-delete-btns');
+    todoBtns.classList.add('todo-edit-delete-btns');
     todoDiv.appendChild(todoBtns);
 
     const todoEditIcon = document.createElement('img');
