@@ -51,7 +51,7 @@ label {
 
 .header {
   font-family: 'SMD';
-  font-size: 40px;
+  font-size: 48px;
   background-color: rgb(64, 112, 92);
   color: white;
   grid-area: header;
@@ -68,10 +68,13 @@ label {
 .project-item {
   background: none;
   border: none;
+  padding-bottom: 3px;
+  padding-left: 6px;
 }
 
 .project-item:hover {
   cursor: pointer;
+  opacity: 75%;
 }
 
 .content-container {
@@ -107,7 +110,8 @@ label {
 }
 
 .active {
-  color: rgb(92, 154, 128);
+  color:rgb(64, 112, 92);
+  font-family: 'Lato-Bold';
 }
 
 .modal {
@@ -153,10 +157,6 @@ label {
 
 #new-todo-button {
   display: none;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 .completed {
