@@ -55,7 +55,7 @@ h2 {
 }
 
 .sidebar {
-  background-color: rgba(209, 235, 225, 0.537);
+  background-color: rgb(218, 240, 232);
   grid-area: nav;
   max-width: 25vw;
   padding: 12px 24px;
@@ -121,11 +121,30 @@ h2 {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: white;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border: 1px solid rgb(92, 154, 128);
+  width: 50%;
+  border-radius: 4px;
+}
+
+.form-item {
+  margin-bottom: 12px;
+}
+
+.button {
+  font-size: 0.75rem;
+  border-radius: 4px;
+  background-color: rgb(92, 154, 128);
+  color: white;
+  border-color: rgb(92, 154, 128);
+}
+
+.button:hover {
+  border-color:rgb(92, 154, 128);
+  color:white;
+  opacity: 75%;
 }
 
 #new-todo-button {
