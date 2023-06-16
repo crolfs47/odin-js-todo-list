@@ -14,9 +14,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('./fonts/Lato-Bold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   margin: 0px;
   font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+h2 {
+  font-family: 'Lato-Bold';
+  font-size: 20px;
+  padding-right: 12px;
 }
 
 .page-container {
@@ -56,7 +70,6 @@ body {
   cursor: pointer;
 }
 
-
 .content-container {
   grid-area: content;
   padding: 12px 24px;
@@ -65,6 +78,18 @@ body {
 .content-header {
   display: flex;
   align-items: center;
+  margin-right: 20px;
+  padding-bottom: 12px;
+}
+
+.add-button {
+  color: rgb(92, 154, 128);
+  font-size: 24px;
+}
+
+.add-button:hover {
+  cursor: pointer;
+  opacity: 75%;
 }
 
 .edit-delete-btns {
@@ -121,6 +146,10 @@ button:hover {
 
 .box {
   padding: 10px 20px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .todo-item {

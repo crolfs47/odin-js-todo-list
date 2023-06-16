@@ -14,8 +14,10 @@
         <header>To Do List</header>
       </div>
       <aside class="sidebar">
-        <h3>Projects</h3>
-        <button id="new-project-button">New Project</button>
+        <div class="is-flex is-align-items-center">
+          <h2>Projects</h2>
+          <div class="add-button" id="new-project-button"><i class="fa-solid fa-square-plus"></i></div>
+        </div>
         <div id="project-form-modal" class="modal">
           <div class="modal-content">
             <form id="new-project-form">
@@ -35,7 +37,8 @@
       </aside>
       <div class="content-container">
         <div class="content-header">
-          <h2 id="project-title"></h1>
+          <h2 id="project-title"></h2>
+          <div class="add-button" id="new-todo-button"><i class="fa-solid fa-square-plus"></i></div>
           <div class="edit-delete-btns">
             <img class="image-link" id="project-edit-image"/>
             <img class="image-link" id="project-delete-image"/>
@@ -57,7 +60,6 @@
           </div>
         </div>
         <div class="content-todo">
-          <button id="new-todo-button">New Task</button>
           <div id="todo-form-modal" class="modal">
             <div class="modal-content">
               <form id="new-todo-form">
