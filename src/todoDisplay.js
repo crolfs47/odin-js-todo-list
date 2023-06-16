@@ -72,7 +72,7 @@ const showTodos = () => {
           <span class="todo-desc is-size-7">${project.todos[i].desc}</span>
         </div>
         <div class="todo-date-priority">  
-          <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'PP')}</span>
+          <span class="todo-date">${format(new Date(formatDate(project.todos[i].dueDate)), 'P')}</span>
           <span class="todo-priority">${showPriority(project.todos[i].priority)}</span>
         </div>`;
     todoDiv.appendChild(todoTextDiv);
