@@ -1,4 +1,4 @@
-const projects = JSON.parse(localStorage.getItem('projects'));
+const projects = JSON.parse(localStorage.getItem('projects')) || [];
 let currentProject = '';
 const newProjectForm = document.getElementById('new-project-form');
 const editProjectForm = document.getElementById('edit-project-form');
