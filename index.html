@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>To Do List</title>
   </head>
   <body>
@@ -16,22 +18,26 @@
       <aside class="sidebar">
         <div class="is-flex is-align-items-center">
           <h2>Projects</h2>
-          <div class="add-button" id="new-project-button"><i class="fa-solid fa-square-plus"></i></div>
+          <div class="add-button" id="new-project-button">
+            <i class="fa-solid fa-square-plus"></i>
+          </div>
         </div>
         <div id="project-form-modal" class="modal">
           <div class="modal-content">
             <form id="new-project-form">
               <h2 class="form-item">New Project</h2>
-                <input
-                  type="test"
-                  name="project-name"
-                  placeholder="Project Name"
-                  id="project-name"
-                  class="input is-small form-item"
-                  required
-                />
-                <input class="button" type="submit" value="Create New Project" />
-                <button class="button" type="button" id="new-project-cancel">Cancel</button>
+              <input
+                type="test"
+                name="project-name"
+                placeholder="Project Name"
+                id="project-name"
+                class="input is-small form-item"
+                required
+              />
+              <input class="button" type="submit" value="Create New Project" />
+              <button class="button" type="button" id="new-project-cancel">
+                Cancel
+              </button>
             </form>
           </div>
         </div>
@@ -40,10 +46,12 @@
       <div class="content-container">
         <div class="content-header">
           <h2 id="project-title"></h2>
-          <div class="add-button" id="new-todo-button"><i class="fa-solid fa-square-plus"></i></div>
+          <div class="add-button" id="new-todo-button">
+            <i class="fa-solid fa-square-plus"></i>
+          </div>
           <div class="edit-delete-btns">
-            <img class="image-link" id="project-edit-image"/>
-            <img class="image-link" id="project-delete-image"/>
+            <img class="image-link" id="project-edit-image" />
+            <img class="image-link" id="project-delete-image" />
           </div>
           <div id="edit-project-form-modal" class="modal">
             <div class="modal-content">
@@ -57,7 +65,9 @@
                   required
                 />
                 <input class="button" type="submit" value="Edit Project" />
-                <button class="button" type="button" id="edit-project-cancel">Cancel</button>
+                <button class="button" type="button" id="edit-project-cancel">
+                  Cancel
+                </button>
               </form>
             </div>
           </div>
@@ -66,45 +76,93 @@
           <div id="todo-form-modal" class="modal">
             <div class="modal-content">
               <form id="new-todo-form">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" required />
-                <label for="description">Description</label>
-                <input type="text" name="description" id="description" required />
-                <label for="date">Due Date</label>
-                <input type="date" name="date" id="date" required />
-                <label for="priority">Priority</label>
-                <select name="priority" id="priority">
-                  <option value="high">High</option>
-                  <option value="medium">Medium</option>
-                  <option value="low">Low</option>
-                </select>
-                <input type="submit" value="Create" id="new-todo-submit" />
-                <button type="button" id="new-todo-cancel">Cancel</button>
+                <h2 class="form-item">New Task</h2>
+                <input
+                  class="input is-small form-item"
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Title"
+                  required
+                />
+                <textarea
+                  class="textarea is-small form-item"
+                  type="text"
+                  name="description"
+                  id="description"
+                  placeholder="Description"
+                ></textarea>
+                <div class="is-flex is-align-items-center form-item">
+                  <label for="date">Due Date</label>
+                  <input
+                    class="input is-small date-input"
+                    type="date"
+                    name="date"
+                    id="date"
+                    required
+                  />
+                </div>
+                <div class="is-flex is-align-items-center form-item">
+                  <label for="priority">Priority</label>
+                  <div class="select is-small">
+                    <select
+                      name="priority"
+                      id="priority"
+                    >
+                      <option value="high">High</option>
+                      <option value="medium">Medium</option>
+                      <option value="low">Low</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <input class="button" type="submit" value="Create" id="new-todo-submit" />
+                  <button class="button" type="button" id="new-todo-cancel">Cancel</button>
+                </div>
               </form>
             </div>
           </div>
           <div id="edit-todo-form-modal" class="modal">
             <div class="modal-content">
               <form id="edit-todo-form">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="edit-title" required />
-                <label for="description">Description</label>
-                <input type="text" name="description" id="edit-description" required />
-                <label for="date">Due Date</label>
-                <input type="date" name="date" id="edit-date" required />
-                <label for="priority">Priority</label>
-                <select name="priority" id="edit-priority">
-                  <option value="high">High</option>
-                  <option value="medium">Medium</option>
-                  <option value="low">Low</option>
-                </select>
-                <input type="submit" value="Edit" id="edit-todo-submit" />
-                <button type="button" id="edit-todo-cancel">Cancel</button>
+                <h2 class="form-item">Edit Task</h2>
+                <input class="input is-small form-item" type="text" name="title" id="edit-title" required />
+                <textarea
+                  class="textarea is-small form-item"
+                  type="text"
+                  name="description"
+                  id="edit-description"
+                  required
+                ></textarea>
+                <div class="is-flex is-align-items-center form-item">
+                  <label for="date">Due Date</label>
+                  <input
+                    class="input is-small date-input"
+                    type="date"
+                    name="date"
+                    id="edit-date"
+                    required
+                  />
+                </div>
+                <div class="is-flex is-align-items-center form-item">
+                  <label for="priority">Priority</label>
+                  <div class="select is-small">
+                    <select
+                      name="priority"
+                      id="edit-priority"
+                    >
+                      <option value="high">High</option>
+                      <option value="medium">Medium</option>
+                      <option value="low">Low</option>
+                    </select>
+                  </div>
+                </div>
+                <input class="button" type="submit" value="Edit" id="edit-todo-submit" />
+                <button class="button" type="button" id="edit-todo-cancel">Cancel</button>
               </form>
             </div>
           </div>
-          <div id="todo-container">
-          </div>
+          <div id="todo-container"></div>
         </div>
       </div>
       <footer class="footer"></footer>
